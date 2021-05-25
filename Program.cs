@@ -11,7 +11,7 @@ namespace GitDemo
 
         static String message()
         {
-            return "Hello";
+            return "Hello and Hej";
         }
     }
 }
