@@ -9,12 +9,12 @@ namespace GitDemo
             Console.WriteLine(message());
         }
 
-        static string EnglishMessage()
+        static string MessageInEnglish()
         {
             return "Hello";
         }
         
-        static string SwedishMessage()
+        static string MessageInSwedish()
         {
             return "Hej";
         }
