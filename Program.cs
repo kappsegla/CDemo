@@ -6,7 +6,12 @@ namespace GitDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hej hej");
+            Console.WriteLine(message());
+        }
+        
+        static String message()
+        {
+            return "Hej";
         }
     }
 }
