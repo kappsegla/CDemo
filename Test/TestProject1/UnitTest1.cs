@@ -18,7 +18,7 @@ namespace TestProject1
         {
             var actualResult = Program.MessageInEnglish();
 
-            Assert.Equal("Hell0", actualResult);
+            Assert.Equal("Hello", actualResult);
         }
     }
 }
