@@ -6,14 +6,14 @@ namespace GitDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(message());
+            Console.WriteLine(MessageInSwedish());
         }
 
         static string MessageInEnglish()
         {
             return "Hello";
         }
-        
+
         static string MessageInSwedish()
         {
             return "Hej";
