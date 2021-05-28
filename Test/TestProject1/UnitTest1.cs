@@ -1,5 +1,4 @@
 using GitDemo;
-using System;
 using Xunit;
 
 namespace TestProject1
@@ -7,11 +6,19 @@ namespace TestProject1
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void MessageInSwedishReturnsHej()
         {
             var actualResult = Program.MessageInSwedish();
 
             Assert.Equal("Hej", actualResult);
+        }
+
+        [Fact]
+        public void MessageInEnglishReturnsHello()
+        {
+            var actualResult = Program.MessageInEnglish();
+
+            Assert.Equal("Hell0", actualResult);
         }
     }
 }
