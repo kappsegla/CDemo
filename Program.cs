@@ -2,19 +2,19 @@
 
 namespace GitDemo
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine(MessageInSwedish());
         }
 
-        static string MessageInEnglish()
+        public static string MessageInEnglish()
         {
             return "Hello";
         }
 
-        static string MessageInSwedish()
+        public static string MessageInSwedish()
         {
             return "Hej";
         }
