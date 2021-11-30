@@ -1,5 +1,8 @@
+using System.Collections.Generic;
 using GitDemo;
 using Xunit;
+using FluentAssertions;
+using System;
 
 namespace TestProject1
 {
@@ -20,5 +23,51 @@ namespace TestProject1
 
             Assert.Equal("Hello", actualResult);
         }
+
+        [Fact]
+        public void GetSomeNamesReturnsTwoNames()
+        {
+            List<string> expected = getListWithNames();
+
+            var result = Program.GetSomeNames();
+            Assert.Equal(2, result.Count);
+            Assert.Equal("Martin", result[0]);
+            Assert.Equal("Kalle", result[1]);
+
+            Assert.Equal(expected, result);
+
+            result.Should<string>().HaveCount(2).And.Contain("Martin").And.Contain("Kalle");
+        }
+
+        private static List<string> getListWithNames()
+        {
+            return new List<string>() { "Martin", "Kalle" };
+        }
+
+        [Theory]
+        [InlineData(2)]
+        [InlineData(4)]
+        [InlineData(10)]
+        [InlineData(100)]
+        public void IsEvenIsTrueForNumberTwo(int value)
+        {
+            var result = Program.IsEven(value);
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void MethodShouldThrowException()
+        {
+            Assert.Throws<ArgumentException>(() => Program.IsEven(2));
+
+
+        }
+
+        
+
+
+
+
     }
 }
