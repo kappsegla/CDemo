@@ -55,19 +55,5 @@ namespace TestProject1
 
             Assert.True(result);
         }
-
-        [Fact]
-        public void MethodShouldThrowException()
-        {
-            Assert.Throws<ArgumentException>(() => Program.IsEven(2));
-
-
-        }
-
-        
-
-
-
-
     }
 }
